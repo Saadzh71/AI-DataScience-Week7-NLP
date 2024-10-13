@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Signal System</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #ffe4e1;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #ff69b4;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .green-time {
+            color: #32cd32;
+            font-size: 1.7rem;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        form {
+            margin-top: 30px;
+        }
+        label {
+            font-size: 1.2rem;
+            color: #555;
+        }
+        input[type="file"] {
+            padding: 10px;
+            border: 2px solid #ffb6c1;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        button {
+            background-color: #ff69b4;
+            color: white;
+            padding: 12px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+        img {
+            margin-top: 20px;
+            border-radius: 15px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌸 Real-Time Traffic Signal Adjustment 🌸</h1>
+    
+    <img src="images/green_signal.jpg" alt="Cute Traffic" id="cute-pic">
+    
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <label for="file">Upload a video:</label><br>
+        <input type="file" name="file" id="file" accept="video/*"><br><br>
+        <button type="submit">Upload and Process</button>
+    </form>
+    
+    {% if green_signal_time %}
+        <p class="green-time">🚦 Adjusted Green Signal Time: {{ green_signal_time }} seconds</p>
+    {% endif %}
+</body>
+</html>

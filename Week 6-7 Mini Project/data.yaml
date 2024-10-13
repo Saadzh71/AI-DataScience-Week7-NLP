@@ -1,0 +1,7 @@
+
+train: /content/dataset/images/train # Path to the training images
+val: /content/dataset/images/valid   # Path to the validation images
+
+nc: 4  # Number of classes (since you are only detecting vehicles, set this to 1)
+
+names: ['car', 'truck', 'bus', 'motorcycle']  # List the names of your classes. For vehicles, you can adjust this accordingly
